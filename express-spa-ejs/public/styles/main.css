@@ -1,0 +1,27 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+}
+
+main {
+  padding: 50px 5%;
+}
+
+.projects a {
+  display: block;
+  margin: 20px 0;
+}
+
+.project-detail p {
+  max-width: 500px;
+}

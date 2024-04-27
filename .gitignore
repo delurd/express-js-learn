@@ -1,0 +1,9 @@
+# local env files
+.env
+.env*.local
+
+# dependencies
+*/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
