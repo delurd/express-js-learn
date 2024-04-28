@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-const serverless = require('serverless-http');
+// const serverless = require('serverless-http'); //for netlify
 const path = require('path');
 const projectDatas = require('./views/data/projects.js');
 // import projects from './views/data/projects.js';
@@ -73,4 +73,5 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
 
-module.exports = serverless(app); //for netlify
+// module.exports = serverless(app); //for netlify
+module.exports = app; //for vercel
