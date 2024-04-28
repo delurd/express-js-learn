@@ -2,11 +2,13 @@
 
 const getUrlPath = () => window.location.pathname;
 
-(function updatePageTitle(title = '') {
+function updatePageTitle(title = '') {
   const _getTitle = document.querySelector('title');
 
-  _getTitle.innerText = title;
-})();
+  title = title.length ? title : 'Home';
+
+  _getTitle.innerText = title.toUpperCase();
+}
 
 async function updatePageView(routeTo, routeFrom = '0') {
   // console.log('update view');
@@ -17,7 +19,7 @@ async function updatePageView(routeTo, routeFrom = '0') {
 
   if (!getHtml.ok) {
     console.log('404');
-    mainOfDocument.innerHTML = '<div><b>404</b></div>'
+    mainOfDocument.innerHTML = '<div><b>404</b></div>';
     return true;
   }
 
@@ -27,6 +29,8 @@ async function updatePageView(routeTo, routeFrom = '0') {
   const getMainElement = wrap.querySelector('main').innerHTML;
 
   mainOfDocument.innerHTML = getMainElement;
+
+  updatePageTitle(routeTo.split('/')[1]);
 
   reLink();
   return true;

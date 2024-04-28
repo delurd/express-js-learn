@@ -37,19 +37,19 @@ var data = {route: 'home'};
 
 app.get('/', function (req, res) {
   res.render('index', {
-    data: {route: 'home', title: 'Home'},
+    data: {route: 'home', title: 'HOME'},
   });
 });
 
 app.get('/about', function (req, res) {
   res.render('index', {
-    data: {route: 'about', title: 'About'},
+    data: {route: 'about', title: 'ABOUT'},
   });
 });
 
 app.get('/project', function (req, res) {
   res.render('index', {
-    data: {route: 'project', title: 'Projects'},
+    data: {route: 'project', title: 'PROJECT'},
   });
 });
 
